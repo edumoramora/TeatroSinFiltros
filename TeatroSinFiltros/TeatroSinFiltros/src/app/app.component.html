@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teatro Sin Filtros</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <a class="navbar-brand" href="#">Teatro Sin Filtros</a>
+           
+            <div id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Funciones</a>
+                <a class="nav-item nav-link" href="#">Contacto</a>
+              </div>
+            </div>
+            <div class="ml-auto">
+              <a [routerLink]="'/login'" class="nav-link">Iniciar Sesión</a>
+            </div>
+          </nav>
+    </header>
+
+     
+    <router-outlet></router-outlet> 
+
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-column">
+          <h3 class="footer-title">Blog del Teatro</h3>
+          <ul>
+            <a href="#" class="footer-link">Blog</a>
+            <a href="#" class="footer-link">Teatros Colaboradores</a>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Digital</h3>
+          <ul>
+            <a href="#" class="footer-link">Como llegar</a>
+            <a href="#" class="footer-link">Contacto</a>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Información</h3>
+          <ul>
+            <a href="#" class="footer-link">Enlace 1</a>
+            <a href="#" class="footer-link">Enlace 2</a>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Redes Sociales</h3>
+          <ul>
+            <a href="#" class="footer-link">Enlace 1</a>
+            <a href="#" class="footer-link">Enlace 2</a>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Teatro Sin Filtros 2023 - Web Master: Eduardo Mora Mora - Diseño: webDesigns.es</p>
+      </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
