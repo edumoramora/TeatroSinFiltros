@@ -37,6 +37,28 @@ app.get('/api/obras', (req, res) => {
     });
 });
 
+app.post('/api/obras', (req, res) => {
+  const { titulo, imagen_url, descripcion } = req.body;
+
+  if (!titulo || !imagen_url || !descripcion) {
+    return res.status(400).send('Todos los campos son obligatorios');
+  }
+
+  const query = 'INSERT INTO obras (titulo, imagen_url, descripcion) VALUES (?, ?, ?)';
+  db.query(query, [titulo, imagen_url, descripcion], (err, result) => {
+    if (err) {
+      console.error('Error al insertar la obra:', err);
+      if (err.code === 'ER_DUP_ENTRY') {
+        return res.status(409).send('Ya existe una obra con ese título');
+      }
+      return res.status(500).send('Error interno del servidor');
+    }
+    res.status(201).json({ mensaje: 'Obra creada con éxito', id: result.insertId });
+  });
+});
+
+
+
 app.post('/api/login', (req, res) => {
   const { nombre_usuario, contrasena } = req.body;
   const query = 'SELECT * FROM usuarios WHERE nombre_usuario = ?';

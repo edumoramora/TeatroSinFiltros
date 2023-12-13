@@ -13,4 +13,8 @@ export class ObraService {
   getObras(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  addObra(obra: any): Observable<any> {
+    return this.http.post(this.apiUrl, obra);
+  }
 }
