@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ShowCardComponent } from './show-card/show-card.component';
 import { LoginComponent } from './login/login.component';
+import { AddObraComponent } from './add-obra/add-obra.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -13,7 +14,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     ShowCardComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddObraComponent
   ],
   imports: [
     BrowserModule,
