@@ -5,12 +5,6 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const app = express();
-app.use(cors({
-    origin: 'http://localhost:4200' //mismo que el del server en el que se ejecuta la app
-  }));
-app.use(express.json());
-
 
 const con = mysql.createConnection({
   host: process.env.DB_HOST,
